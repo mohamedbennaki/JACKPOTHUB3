@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in Page</title>
+    <link rel="icon" type="image/png" href="logo .jpg">
+    <style>
+      html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(to right, #e2e2e2, #1e022d); /* Inverted gradient */
+    background-size: cover;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    background: #1e022d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Add relative positioning */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+/* New "Return Home" button */
+.return-home {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #6d36a4, #1e022d);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.return-home:hover {
+    background: linear-gradient(90deg, #482574, #1e022d);
+}
+
+main {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 75px);
+}
+
+.signup-container h1 img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.signup-container {
+    background-color: #1e022d;
+    padding: 25px;
+    border-radius: 100px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #c29fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e1bee7;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    height: 30px;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-container input:focus {
+    border-color: #e1d4ff;
+    box-shadow: 0 0 5px rgba(193, 159, 255, 0.7);
+}
+
+.signup-container button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #6d36a4, #1e022d);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto 25px auto;
+    display: block;
+    transition: background 0.3s;
+}
+
+.signup-container button:hover {
+    background: linear-gradient(90deg, #482574, #1e022d);
+}
+
+.signup-container a {
+    text-decoration: none;
+    color: #c29fff;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
+
+.signup-container a:hover {
+    color: #e1d4ff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo .jpg" alt="Logo">
+            JACKPOT HUB
+        </div>
+        <button class="return-home" onclick="window.location.href='projet.html';">Return Home</button>
+    </header>
+
+    <main>
+        <div class="signup-container">
+            <h1>
+                <img src="logo .jpg" alt="Logo">
+                Log In
+            </h1>
+            <form action="signup_process.php" method="POST">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Log In</button>
+                <a href="createacc.html">Dont have an account?<br>Sign up</a>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
